@@ -1,0 +1,62 @@
+<!-- Untitled-1.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" aria-hidden="true">
+    <!-- White background -->
+    <rect width="120" height="120" fill="#fff"/>
+
+    <g stroke="#aaa" stroke-width="0.5" shape-rendering="crispEdges">
+        <!-- Vertical lines (10) -->
+        <line x1="0.25"  y1="0" x2="0.25"  y2="120"/>
+        <line x1="10" y1="0" x2="10" y2="120"/>
+        <line x1="20" y1="0" x2="20" y2="120"/>
+        <line x1="30" y1="0" x2="30" y2="120"/>
+        <line x1="40" y1="0" x2="40" y2="120"/>
+        <line x1="50" y1="0" x2="50" y2="120"/>
+        <line x1="60" y1="0" x2="60" y2="120"/>
+        <line x1="70" y1="0" x2="70" y2="120"/>
+        <line x1="80" y1="0" x2="80" y2="120"/>
+        <line x1="90" y1="0" x2="90" y2="120"/>
+        <line x1="100" y1="0" x2="100" y2="120"/>
+        <line x1="110" y1="0" x2="110" y2="120"/>
+        <line x1="119.75" y1="0" x2="119.75" y2="120"/>
+
+        <!-- Horizontal lines (10) -->
+        <line x1="0" y1="0.25"  x2="120" y2="0.25"/>
+        <line x1="0" y1="10" x2="120" y2="10"/>
+        <line x1="0" y1="20" x2="120" y2="20"/>
+        <line x1="0" y1="30" x2="120" y2="30"/>
+        <line x1="0" y1="40" x2="120" y2="40"/>
+        <line x1="0" y1="50" x2="120" y2="50"/>
+        <line x1="0" y1="60" x2="120" y2="60"/>
+        <line x1="0" y1="70" x2="120" y2="70"/>
+        <line x1="0" y1="80" x2="120" y2="80"/>
+        <line x1="0" y1="90" x2="120" y2="90"/>
+        <line x1="0" y1="100" x2="120" y2="100"/>
+        <line x1="0" y1="110" x2="120" y2="110"/>
+        <line x1="0" y1="119.75" x2="120" y2="119.75"/>
+    </g>
+
+    <!-- Black square background for C shape -->
+    <rect width="100" height="100" x="10" y="10" fill="#000"/>
+
+    <!-- C shape squares -->
+    <g fill="#fff" stroke="#aaa" stroke-width="0.5" shape-rendering="crispEdges">
+        <rect width="10" height="10" x="40" y="30"/>
+        <rect width="10" height="10" x="50" y="30"/>
+        <rect width="10" height="10" x="60" y="30"/>
+        <rect width="10" height="10" x="70" y="30"/>
+        <rect width="10" height="10" x="30" y="40"/>
+        <rect width="10" height="10" x="40" y="40"/>
+        <rect width="10" height="10" x="70" y="40"/>
+        <rect width="10" height="10" x="80" y="40"/>
+        <rect width="10" height="10" x="30" y="50"/>
+        <rect width="10" height="10" x="30" y="60"/>
+        <rect width="10" height="10" x="30" y="70"/>
+        <rect width="10" height="10" x="40" y="70"/>
+        <rect width="10" height="10" x="70" y="70"/>
+        <rect width="10" height="10" x="80" y="70"/>
+        <rect width="10" height="10" x="40" y="80"/>
+        <rect width="10" height="10" x="50" y="80"/>
+        <rect width="10" height="10" x="60" y="80"/>
+        <rect width="10" height="10" x="70" y="80"/>
+    </g>
+</svg>
