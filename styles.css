@@ -4,21 +4,121 @@ html, body {
 }
 
 body {
-    /* Center content horizontally and vertically */
+    --bg: #fff;
+    --text: #0b0b0b;
+    --header-height: 124px;
+    --logo-size: min(60vmin, 340px);
+    --ease-out: cubic-bezier(0.2, 0.9, 0.2, 1);
+    --intro-duration: 1400ms;
+    --fade-duration: 700ms;
+
     min-height: 100vh;
     margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    text-align: center;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    text-align: center;
+    justify-content: center;
+}
 
-    /* Monospace font stack */
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+}
+
+.header-logo {
+    width: 52px;
+    height: 52px;
+    flex: 0 0 auto;
+    opacity: 1;
+}
+
+.title {
+    margin: 0;
+    font-size: clamp(28px, 4vw, 44px);
+    letter-spacing: 0.01em;
+    opacity: 1;
 }
 
 #dots {
     display: inline-block;
-    min-width: 3ch;
     text-align: left;
+    min-width: 3ch; /* Reserve space for three dots */
+}
+
+
+/* INTRO ANIMATION CSS */
+.header-logo,
+.title,
+.content {
+    transition: opacity var(--fade-duration) ease, transform var(--fade-duration) ease;
+}
+
+body.loading .header-logo,
+body.loading .title,
+body.loading .content {
+    opacity: 0;
+}
+
+body.intro-finished .header-logo,
+body.intro-finished .title,
+body.intro-finished .content {
+    opacity: 1;
+}
+
+body.intro-finished .content {
+    /* 
+        Slight delay after title fades in 
+        1600ms so that the dots animation has done at least one full cycle
+        (500ms per dot cycle x 3 dots + 100ms buffer = 1600ms)
+        (don't want content with some of the dots visible) 
+    */
+    transition-delay: 1600ms;
+}
+
+#splash {
+    position: fixed;
+    pointer-events: none;
+}
+
+#splashLogo {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: var(--logo-size);
+    height: auto;
+    transform: translate(-50%, -50%) scale(1);
+    transform-origin: center center;
+    will-change: transform, left, top;
+}
+
+body.intro-running #splashLogo {
+    left: var(--target-left, 50%);
+    top: var(--target-top, 50%);
+    transform: translate(-50%, -50%) scale(var(--target-scale, 0.34));
+    transition:
+        transform var(--intro-duration) var(--ease-out),
+        left var(--intro-duration) var(--ease-out),
+        top var(--intro-duration) var(--ease-out);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #splashLogo,
+    #splash,
+    .header-logo,
+    .title,
+    .content {
+        transition: none !important;
+        transition-delay: none !important;
+    }
+
+    #splash {
+        display: none !important;
+    }
 }

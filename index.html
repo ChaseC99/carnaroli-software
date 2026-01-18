@@ -8,10 +8,20 @@
     <script defer src="script.js"></script>
     <link rel="icon" href="logo.svg" sizes="any" type="image/svg+xml">
 </head>
-<body>
-    <h1>Carnaroli Software</h1>
-    <p>
-        Deploying soon<span id="dots" aria-hidden="true" style="min-width: 3ch;"></span>
-    </p>
+<body class="loading">
+    <div id="splash" aria-hidden="true">
+        <img id="splashLogo" src="logo.svg" alt="Carnaroli Software Logo" />
+    </div>
+
+    <header class="site-header">
+        <img class="header-logo" src="logo.svg" alt="Carnaroli Software logo" />
+        <h1 class="title">Carnaroli Software</h1>
+    </header>
+
+    <main class="content">
+        <p>
+            Deploying soon<span id="dots" aria-hidden="true"></span>
+        </p>
+    </main>
 </body>
 </html>
