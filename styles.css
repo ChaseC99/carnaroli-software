@@ -1,6 +1,5 @@
-/* Site-wide styles */
-html, body {
-    height: 100%;
+a {
+    color: blue;
 }
 
 body {
@@ -12,8 +11,9 @@ body {
     --intro-duration: 1400ms;
     --fade-duration: 700ms;
 
-    min-height: 100vh;
     margin: 0;
+    margin-top: 2em;
+    height: calc(100vh - 2em);
     background: var(--bg);
     color: var(--text);
     text-align: center;
@@ -22,7 +22,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
 .site-header {
@@ -46,6 +45,10 @@ body {
     opacity: 1;
 }
 
+main {
+    flex: 1
+}
+
 #dots {
     display: inline-block;
     text-align: left;
@@ -56,23 +59,27 @@ body {
 /* INTRO ANIMATION CSS */
 .header-logo,
 .title,
-.content {
+.content,
+footer {
     transition: opacity var(--fade-duration) ease, transform var(--fade-duration) ease;
 }
 
 body.loading .header-logo,
 body.loading .title,
-body.loading .content {
+body.loading .content,
+body.loading footer {
     opacity: 0;
 }
 
 body.intro-finished .header-logo,
 body.intro-finished .title,
-body.intro-finished .content {
+body.intro-finished .content,
+body.intro-finished footer {
     opacity: 1;
 }
 
-body.intro-finished .content {
+body.intro-finished .content,
+body.intro-finished footer {
     /* 
         Slight delay after title fades in 
         1600ms so that the dots animation has done at least one full cycle
@@ -113,7 +120,8 @@ body.intro-running #splashLogo {
     #splash,
     .header-logo,
     .title,
-    .content {
+    .content,
+    footer {
         transition: none !important;
         transition-delay: none !important;
     }
