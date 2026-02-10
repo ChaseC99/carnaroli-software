@@ -1,10 +1,16 @@
 a {
     color: blue;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 body {
     --bg: #fff;
     --text: #0b0b0b;
+    --light-gray: #c8c8c8;
     --header-height: 124px;
     --logo-size: min(60vmin, 340px);
     --ease-out: cubic-bezier(0.2, 0.9, 0.2, 1);
@@ -29,6 +35,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 14px;
+    margin-bottom: 1.5em;
 }
 
 .header-logo {
@@ -40,13 +47,15 @@ body {
 
 .title {
     margin: 0;
-    font-size: clamp(28px, 4vw, 44px);
+    font-size: clamp(26px, 4vw, 2.75em);
     letter-spacing: 0.01em;
     opacity: 1;
 }
 
 main {
-    flex: 1
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 #dots {
@@ -55,6 +64,51 @@ main {
     min-width: 3ch; /* Reserve space for three dots */
 }
 
+.headline {
+    padding: 0 1em;
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background: var(--light-gray);
+    margin: 1.5em 0;
+}
+
+.projects-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+    justify-content: center;
+    margin: 1.5em auto 3em auto;
+}
+
+.project-item {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 0 1em 0 1em;
+    border-radius: 10px;
+    color: var(--text);
+    border: 1px solid var(--text);
+}
+
+.project-item img {
+    border-radius: calc(1em - 10px) calc(1em - 10px) 0 0;
+}
+
+.project-item:hover {
+    text-decoration: none;
+    box-shadow: 0 3px 6px rgba(11, 11, 11, 0.25);
+}
+
+.project-item:hover .project-url {
+    text-decoration: underline;
+}
+
+footer {
+    width: 100vw;
+}
 
 /* INTRO ANIMATION CSS */
 .header-logo,
