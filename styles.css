@@ -95,6 +95,8 @@ main {
 
 .project-item img {
     border-radius: calc(1em - 10px) calc(1em - 10px) 0 0;
+    height: 200px;
+    object-fit: contain;
 }
 
 .project-item:hover {
