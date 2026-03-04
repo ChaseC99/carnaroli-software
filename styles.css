@@ -138,11 +138,8 @@ body.intro-finished .content,
 body.intro-finished footer {
     /* 
         Slight delay after title fades in 
-        1600ms so that the dots animation has done at least one full cycle
-        (500ms per dot cycle x 3 dots + 100ms buffer = 1600ms)
-        (don't want content with some of the dots visible) 
     */
-    transition-delay: 1600ms;
+    transition-delay: 800ms;
 }
 
 #splash {

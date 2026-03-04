@@ -83,7 +83,7 @@ function runIntroAnimation() {
 		});
 	}
 
-	setTimeout(start, 1000);
+	setTimeout(start, 500);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
